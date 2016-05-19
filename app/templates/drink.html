@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row.fluid">
+
+    <div class="center-block">
+    <a href="#">
+    <img class="img-responsive" src="http://placehold.it/300x300" alt="">
+    </a>
+    </div>
+    <div class="col-md-5">
+        <h3>{{ drinks.name }}</h3>
+        <h4>A drink made with (placeholder for list of ingredients)</h4>
+        <p>{{ drinks.description }}</p>
+        <a href="/make_drink/{{ drinks.id }}" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-filter"></span> Make drink!</a>
+    </div>
+</div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+
+            <div class="span4">
+                <h2>Add a drink to the bar</h2>
+                <form action="" method="post" name="add_drink">
+                 {{ form.hidden_tag() }}
+                <p>
+                     {{ form.drink_name(placeholder="Name of your drink") }}<br>
+                </p>
+                    <p>{{ form.description(placeholder="Describe your drink!") }} </p>
+                    {% for error in form.errors %}
+                        <span style="color: red;"> Please provide a {{ error }}.<br></span>
+                        {% endfor %}<br>
+
+        </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <fieldset>
+            <div class="span4">
+                <p> {{ form.vodka.label }}  {{ form.vodka(size=1)}} </p>
+                <p> {{ form.gin.label }}    {{ form.gin(size=1) }} </p>
+                <p> {{ form.rum.label }}    {{ form.rum(size=1) }} </p>
+                <p> {{ form.whisky.label }} {{ form.whisky(size=1) }}  </p><br>
+
+
+
+                    <p><input type="submit" class="btn btn-lg btn-primary" value="Submit"></p>
+
+
+            </fieldset>
+         </form>
+        </div>
+
+        </div>
+
+
+{% endblock %}
+

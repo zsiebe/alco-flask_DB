@@ -1,0 +1,37 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+
+ <div class="container.fluid">
+        <div class="row-fluid">
+            <div class="col-xs-6 col-md-3">
+
+                <table class="table">
+         <thead>
+            <tr>
+               <th>Drink Name</th>
+               <th>Description</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for drinks in drinks %}
+               <tr>
+                  <td> <a href="/see_drink/{{ drinks.id }}">{{ drinks.name }}</a></td>
+                  <td>{{ drinks.description }}</td>
+
+               </tr>
+            {% endfor %}
+            </div>
+            </div>
+
+</div>
+
+
+
+
+{% endblock %}
+
+
